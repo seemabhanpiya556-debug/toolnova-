@@ -1,125 +1,186 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>ToolNova - AI Tools & Innovation Platform</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+*{
+box-sizing:border-box;
+}
+
 body{
 font-family:Arial,sans-serif;
 margin:0;
 background:#f4f7fb;
+color:#222;
 text-align:center;
+transition:.3s;
 }
+
+.dark{
+background:#121212;
+color:white;
+}
+
 
 header{
-background:#0d6efd;
+background:linear-gradient(135deg,#0d6efd,#6610f2);
 color:white;
-padding:20px;
-}
-
-.logo{
-width:140px;
-margin-top:15px;
-border-radius:15px;
-}
-
-.hero{
 padding:30px;
 }
 
-.button{
-display:inline-block;
+
+.logo{
+width:150px;
+height:150px;
+object-fit:cover;
+border-radius:20px;
+margin:25px;
+box-shadow:0 5px 15px #999;
+}
+
+
+.hero{
+padding:25px;
+}
+
+
+.search{
+width:80%;
+max-width:400px;
+padding:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+
+.btn{
 background:#0d6efd;
 color:white;
 padding:12px 20px;
-border-radius:8px;
-text-decoration:none;
-margin-top:15px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+margin:10px;
 }
 
-.search{
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-margin-top:15px;
-width:200px;
-}
 
 .tools{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
-padding:20px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:25px;
+
 }
 
+
 .card{
+
 background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
+padding:25px;
+border-radius:15px;
 text-decoration:none;
 color:black;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+transition:.3s;
+
 }
+
+
+.dark .card{
+background:#222;
+color:white;
+}
+
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+
+section{
+padding:30px;
+}
+
+
+footer{
+
+background:#0d6efd;
+color:white;
+padding:20px;
+
+}
+
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-<h1>ToolNova</h1>
+
+<h1>🚀 ToolNova</h1>
+
 <p>AI Tools & Innovation Platform</p>
+
+<button class="btn" onclick="darkMode()">🌙 Dark Mode</button>
+
 </header>
 
+
 <img src="777235592_1784137686868875.jpg" class="logo">
+
+
 
 <div class="hero">
 
 <h2>Welcome to ToolNova</h2>
 
-<p>Discover the best AI tools for writing, images, videos and productivity.</p>
+<p>
+Discover powerful AI tools for work, creativity and productivity.
+</p>
 
-<a href="#tools" class="button">Explore Tools</a>
 
-<br>
-
-<input class="search" id="searchInput" placeholder="Search AI Tools...">
+<input class="search" id="searchInput" placeholder="🔍 Search AI Tools...">
 
 </div>
+
+
+
+<h2>🤖 AI Tools</h2>
 
 
 <div class="tools" id="tools">
 
-<a href="https://chatgpt.com/" class="card">
-<h3>AI Chat</h3>
+
+<a class="card" href="https://chatgpt.com/">
+<h3>🤖 AI Chat</h3>
 <p>Smart AI Assistant</p>
 </a>
 
 
-<a href="https://www.bing.com/images/create" class="card">
-<h3>AI Image</h3>
+<a class="card" href="https://www.bing.com/images/create">
+<h3>🎨 AI Image</h3>
 <p>Create AI Images</p>
 </a>
 
 
-<a href="https://app.veo3.ai/" class="card">
-<h3>AI Video</h3>
+<a class="card" href="https://app.veo3.ai/">
+<h3>🎬 AI Video</h3>
 <p>Generate Videos</p>
 </a>
 
 
-<a href="https://quillbot.com/" class="card">
-<h3>AI Writing</h3>
-<p>Write Faster</p>
+<a class="card" href="https://quillbot.com/">
+<h3>✍️ AI Writing</h3>
+<p>Write Content Faster</p>
 </a>
-
-</div>
-
-
-<footer style="background:#0d6efd;color:white;padding:20px;margin-top:30px;">
-<p>&copy; 2026 ToolNova - AI Tools & Innovation Platform</p>
-</footer>
-
-
-</body>
-</html>
