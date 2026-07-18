@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://seemabhanpiya556-debug.github.io/toolnova-/sitemap.xml
