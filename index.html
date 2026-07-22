@@ -933,7 +933,32 @@ document.body.classList.toggle("dark");
 }
 
 </script>
+document.querySelectorAll("#toolsContainer .card").forEach(function(card){
 
+let fav=document.createElement("span");
+fav.innerHTML="🤍";
+fav.className="favorite";
+
+if(localStorage.getItem(card.href)){
+fav.innerHTML="❤️";
+}
+
+fav.onclick=function(e){
+e.preventDefault();
+e.stopPropagation();
+
+if(fav.innerHTML=="🤍"){
+fav.innerHTML="❤️";
+localStorage.setItem(card.href,"1");
+}else{
+fav.innerHTML="🤍";
+localStorage.removeItem(card.href);
+}
+};
+
+card.appendChild(fav);
+
+});
 
 <footer>
   <p>
