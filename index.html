@@ -837,7 +837,27 @@ let cards = document.querySelectorAll(".card");
 
 
 searchInput.addEventListener("input", function(){
+function filterTools(category){
 
+let cards = document.querySelectorAll("#tools .card");
+
+cards.forEach(function(card){
+
+let text = card.innerText.toLowerCase();
+
+if(category=="all"){
+card.style.display="block";
+}
+else if(text.includes(category)){
+card.style.display="block";
+}
+else{
+card.style.display="none";
+}
+
+});
+
+}
 let value = searchInput.value.toLowerCase();
 
 
