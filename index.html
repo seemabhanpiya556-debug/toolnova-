@@ -828,69 +828,66 @@ ToolNova
 
 
 
-
 <script>
 
 let searchInput = document.getElementById("searchInput");
-
 let cards = document.querySelectorAll("#toolsContainer .card");
 
 
-searchInput.addEventListener("input", function(){
 function filterTools(category){
 
-let cards = document.querySelectorAll("#tools .card");
-
 cards.forEach(function(card){
 
 let text = card.innerText.toLowerCase();
 
-if(category=="all"){
-card.style.display="block";
+if(category == "all"){
+card.style.display = "block";
 }
-else if(text.includes(category)){
-card.style.display="block";
+else if(text.includes(category.toLowerCase())){
+card.style.display = "block";
 }
 else{
-card.style.display="none";
+card.style.display = "none";
 }
 
 });
 
 }
+
+
+// Search Function
+
+if(searchInput){
+
+searchInput.addEventListener("input", function(){
+
 let value = searchInput.value.toLowerCase();
 
-
 cards.forEach(function(card){
 
 let text = card.innerText.toLowerCase();
 
-
 if(text.includes(value)){
-
 card.style.display="block";
-
 }
-
 else{
-
 card.style.display="none";
+}
+
+});
+
+});
 
 }
 
 
-});
-
-});
-
-
+// Dark Mode
 
 function darkMode(){
 
 document.body.classList.toggle("dark");
 
 }
-
 
 </script>
 
