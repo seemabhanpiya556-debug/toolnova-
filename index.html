@@ -938,18 +938,30 @@ fav.className="favorite";
 
 if(localStorage.getItem(card.href)){
 fav.innerHTML="❤️";
-}
 document.querySelectorAll(".tools .card").forEach(function(card){
+
+let fav=document.createElement("span");
+fav.innerHTML="🤍";
+fav.className="favorite";
+
+if(card.href && localStorage.getItem(card.href)){
+fav.innerHTML="❤️";
+}
+
 fav.onclick=function(e){
 e.preventDefault();
 e.stopPropagation();
 
 if(fav.innerHTML=="🤍"){
 fav.innerHTML="❤️";
+if(card.href){
 localStorage.setItem(card.href,"1");
+}
 }else{
 fav.innerHTML="🤍";
+if(card.href){
 localStorage.removeItem(card.href);
+}
 }
 };
 
