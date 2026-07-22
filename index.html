@@ -9,6 +9,32 @@
   gtag('js', new Date());
 
   gtag('config', 'G-44YBS3M9Q5');
+  document.querySelectorAll("#toolsContainer .card").forEach(function(card){
+
+let fav=document.createElement("span");
+fav.innerHTML="🤍";
+fav.className="favorite";
+
+if(localStorage.getItem(card.href)){
+fav.innerHTML="❤️";
+}
+
+fav.onclick=function(e){
+e.preventDefault();
+e.stopPropagation();
+
+if(fav.innerHTML=="🤍"){
+fav.innerHTML="❤️";
+localStorage.setItem(card.href,"1");
+}else{
+fav.innerHTML="🤍";
+localStorage.removeItem(card.href);
+}
+};
+
+card.appendChild(fav);
+
+});
 </script>
 <title>ToolNova - AI Tools & Innovation Platform</title>
 <link rel="icon" type="image/jpeg" href="777235592_1784137686868875.jpg">
