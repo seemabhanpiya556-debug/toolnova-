@@ -931,8 +931,6 @@ function darkMode(){
 document.body.classList.toggle("dark");
 
 }
-
-</script>
 document.querySelectorAll("#toolsContainer .card").forEach(function(card){
 
 let fav=document.createElement("span");
@@ -959,6 +957,7 @@ localStorage.removeItem(card.href);
 card.appendChild(fav);
 
 });
+</script>
 
 <footer>
   <p>
